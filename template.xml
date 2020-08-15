@@ -10,7 +10,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/95832-support-bokker-rsstt-rss-to-telegram/</Support>
   <Project>https://github.com/BoKKeR/RSS-to-Telegram-Bot</Project>
-  <Overview/>
+  <Overview>A self-hosted telegram python bot that dumps posts from RSS feeds to a telegram chat. This script was created because all the third party services were unreliable, slow.</Overview>
   <Category>Network:Other Network:Messenger Productivity:</Category>
   <WebUI/>
   <TemplateURL/>
