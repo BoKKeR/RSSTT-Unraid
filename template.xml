@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RSSTT - RSS To Telegram</Name>
+  <Repository>bokker/rss.to.telegram:latest</Repository>
+  <Registry>https://hub.docker.com/r/bokker/rss.to.telegram</Registry>
+  <Network>bridge</Network>
+  <Beta>True</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/BoKKeR/RSS-to-Telegram-Bot</Project>
+  <Overview/>
+  <Category>Network:Other Network:Messenger Productivity:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/BoKKeR/RSS-to-Telegram-Bot/raw/master/image.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1597503801</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/RSSTT</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CHATID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>60</Value>
+      <Name>DELAY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="Telegram bot token https://botsfortelegram.com/project/the-bot-father/" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="CHATID" Target="CHATID" Default="" Mode="" Description="Telegram chatId, can be found by running bot with /help" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DELAY" Target="DELAY" Default="" Mode="" Description="Delay between RSS feed checks" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
+</Container>
