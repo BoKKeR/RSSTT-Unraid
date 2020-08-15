@@ -8,7 +8,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/95832-support-bokker-rsstt-rss-to-telegram/</Support>
   <Project>https://github.com/BoKKeR/RSS-to-Telegram-Bot</Project>
   <Overview/>
   <Category>Network:Other Network:Messenger Productivity:</Category>
