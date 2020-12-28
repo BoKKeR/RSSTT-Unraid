@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>RSSTT - RSS To Telegram</Name>
+  <Name>RSS To Telegram</Name>
   <Repository>bokker/rss.to.telegram:latest</Repository>
   <Registry>https://hub.docker.com/r/bokker/rss.to.telegram</Registry>
   <Network>bridge</Network>
