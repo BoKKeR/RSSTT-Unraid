@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Thumba</Name>
+  <Repository>bokker/thumba:latest</Repository>
+  <Registry>https://hub.docker.com/r/bokker/thumba</Registry>
+  <Network>bridge</Network>
+  <Beta>True</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/126474-support-bokker-thumba-thumbnail-generation-for-random-media/</Support>
+  <Project>https://github.com/BoKKeR/thumba</Project>
+  <Overview>A self-hosted Thumbnail generator/finder which creates thumbnails based on folder names and google search results.
+  
+  To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba
+  </Overview>
+  <Category>Network:Other Network:Messenger Productivity:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/BoKKeR/thumba/master/thumba.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>GOOGLE_SEARCH_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>GOOGLE_SEARCH_CX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>THUM_KEY_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>THUM_KEY_SECRET</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="GOOGLE_SEARCH_KEY" Target="GOOGLE_SEARCH_KEY" Default="" Mode="" Description="Google custom search key: To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="GOOGLE_SEARCH_CX" Target="GOOGLE_SEARCH_CX" Default="" Mode="" Description="Google custom search project id: To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="THUM_KEY_ID" Target="THUM_KEY_ID" Default="" Mode="" Description="Thum.io keyID: To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
+  <Config Name="THUM_KEY_SECRET" Target="THUM_KEY_SECRET" Default="" Mode="" Description="Thum.io keySecret: To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/thumba" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/thumba</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/thumba_thumbnails" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/thumba_thumbnails</Config>
+</Container>
