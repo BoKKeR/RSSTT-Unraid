@@ -57,6 +57,11 @@ Check the readme https://github.com/BoKKeR/thumba
       <Name>THUM_KEY_SECRET</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NEXT_PUBLIC_HOST</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="WebUI" Target="10010" Default="10010" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">10010</Config>
@@ -64,6 +69,7 @@ Check the readme https://github.com/BoKKeR/thumba
   <Config Name="GOOGLE_SEARCH_CX" Target="GOOGLE_SEARCH_CX" Default="" Mode="" Description="Google custom search project id: Check the readme https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="THUM_KEY_ID" Target="THUM_KEY_ID" Default="" Mode="" Description="Thum.io keyID: Check the readme https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="THUM_KEY_SECRET" Target="THUM_KEY_SECRET" Default="" Mode="" Description="Thum.io keySecret: Check the readme https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="NEXT_PUBLIC_HOST" Target="NEXT_PUBLIC_HOST" Default="" Mode="" Description="Set the host IP/domain without port" Type="Variable" Display="always" Required="true" Mask="false">http://[IP]</Config>
   <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/thumba" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/thumba</Config>
   <Config Name="Media Path" Target="/app/video" Default="" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="true" Mask="false"></Config>
 </Container>
