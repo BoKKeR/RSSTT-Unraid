@@ -56,5 +56,5 @@
   <Config Name="THUM_KEY_ID" Target="THUM_KEY_ID" Default="" Mode="" Description="Thum.io keyID: To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
   <Config Name="THUM_KEY_SECRET" Target="THUM_KEY_SECRET" Default="" Mode="" Description="Thum.io keySecret: To figure out how to get the keys go to the Repository https://github.com/BoKKeR/thumba" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
   <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/thumba" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/thumba</Config>
-  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/thumba_thumbnails" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/thumba_thumbnails</Config>
+  <Config Name="Config Path" Target="/app/video" Default="/mnt/user/appdata/thumba_thumbnails" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/thumba_thumbnails</Config>
 </Container>
