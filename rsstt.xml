@@ -45,7 +45,13 @@
   </Environment>
   <Labels/>
   <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="Telegram bot token https://botsfortelegram.com/project/the-bot-father/" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="CHATID" Target="CHATID" Default="" Mode="" Description="Telegram chatId, can be found by running bot with /help" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="DELAY" Target="DELAY" Default="" Mode="" Description="Delay between RSS feed checks" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
   <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/rsstt" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rsstt</Config>
+
+  <Config Name="DEBUG" Target="DEBUG" Default="false" Mode="" Description="Enable debug mode for more logs" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  
+  <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="127.0.0.1" Mode="" Description="Redis host ip" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="Redis host port" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="REDIS_USER" Target="REDIS_USER" Default="default" Mode="" Description="Redis user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="secret" Mode="" Description="Redis user" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="REDIS_MUTEX" Target="REDIS_MUTEX" Default="randomvalue" Mode="" Description="Redis user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
 </Container>
