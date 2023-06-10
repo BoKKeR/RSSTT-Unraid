@@ -52,6 +52,6 @@
   <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="127.0.0.1" Mode="" Description="Redis host ip" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="6379" Mode="" Description="Redis host port" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="REDIS_USER" Target="REDIS_USER" Default="default" Mode="" Description="Redis user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="secret" Mode="" Description="Redis user" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="REDIS_MUTEX" Target="REDIS_MUTEX" Default="randomvalue" Mode="" Description="Redis user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="secret" Mode="" Description="Redis password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="REDIS_MUTEX" Target="REDIS_MUTEX" Default="randomvalue" Mode="" Description="Redis mutex, used in case of running multiple instances" Type="Variable" Display="always" Required="true" Mask="false"></Config>
 </Container>
