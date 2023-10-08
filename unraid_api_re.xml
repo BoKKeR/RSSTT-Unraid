@@ -1,84 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Name>Unraid-API-RE</Name>
-<Beta>True</Beta>
-<Changes>
+    <Name>Unraid-API-RE</Name>
+    <Beta>True</Beta>
+    <Changes>
 [center][img width='300px' src=''][/center]
 
 [center][font size=5]Unraid Change Log[/font][/center]
 [font size=4][/font]
-0.6 Add MQTT and HA auto discovery
-0.5 PCI controls working
-0.4 Add Pci info but no controls yet
-0.3 Add USB controls
-0.2 Add VM details
-0.1 Start with VM controls
-</Changes>
-<Category>HomeAutomation: Tools:</Category>
-<Support>https://forums.unraid.net/topic/141974-support-fork-unraid-api-re/</Support>
-<Overview>
-use tag 6.11 or 6.12 based on unraid version
 
+    </Changes>
+    <Category>HomeAutomation: Tools:</Category>
+    <Support>https://forums.unraid.net/topic/141974-support-fork-unraid-api-re/</Support>
+    <Overview>
 Fork of the UnraidAPI, since the original project is abandoned. 
 This is an MQTT Home Assistant Bridge with a rest endpoint as well that allows control of unraid from this docker, homeassistant and MQTT/REST generally.
   
-  
 Icon made by https://www.flaticon.com/authors/freepik Freepik
-</Overview>
-<Registry>https://hub.docker.com/repository/docker/bokker/unraidapi-re</Registry>
-<Repository>bokker/unraidapi-re:6.12</Repository>
-<BindTime>true</BindTime>
-<Privileged>false</Privileged>
-<Networking>
-<Mode>bridge</Mode>
-<Publish>
-<Port>
-<HostPort>3005</HostPort>
-<ContainerPort>80</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-</Publish>
-</Networking>
-<Environment>
-<Variable>
-<Name>MQTTBroker</Name>
-<Value>hassio</Value>
-<Mode/>
-</Variable>
-<Variable>
-<Name>MQTTPort</Name>
-<Value>1883</Value>
-<Mode/>
-</Variable>
-<Variable>
-<Name>MQTTUser</Name>
-<Value>mqtt</Value>
-<Mode/>
-</Variable>
-<Variable>
-<Name>MQTTPass</Name>
-<Value>pass</Value>
-<Mode/>
-</Variable>
-<Variable>
-<Name>MQTTBaseTopic</Name>
-<Value>homeassistant</Value>
-<Mode/>
-</Variable>
-<Variable>
-<Name>KeyStorage</Name>
-<Value>config</Value>
-<Mode/>
-</Variable>
-</Environment>
-<Data>
-<Volume>
-<HostDir>/mnt/user/appdata/Unraid-API</HostDir>
-<ContainerDir>/app/config</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-</Data>
-<WebUI>http://[IP]:[PORT:3005]</WebUI>
-<Banner></Banner>
-<Icon>https://raw.githubusercontent.com/BoKKeR/UnraidAPI-RE/master/static/icon.png</Icon>
+    </Overview>
+    <Registry>https://hub.docker.com/repository/docker/bokker/unraidapi-re</Registry>
+    <Repository>bokker/unraidapi-re</Repository>
+    <BindTime>true</BindTime>
+    <Privileged>false</Privileged>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>3005</HostPort>
+                <ContainerPort>80</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/Unraid-API</HostDir>
+            <ContainerDir>/app/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Config Name="WebUI" Target="80" Default="3005" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3005</Config>
+    <Config Name="Config path" Target="/app/config" Default="/mnt/user/appdata/Unraid-API" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Unraid-API</Config>
+    <Config Name="MQTTBroker" Target="MQTTBroker" Default="hassio" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">hassio</Config>
+    <Config Name="MQTTPort" Target="MQTTPort" Default="1883" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
+    <Config Name="MQTTUser" Target="MQTTUser" Default="mqtt" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">mqtt</Config>
+    <Config Name="MQTTPass" Target="MQTTPass" Default="pass" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">pass</Config>
+    <Config Name="MQTTBaseTopic" Target="MQTTBaseTopic" Default="homeassistant" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">homeassistant</Config>
+    <Config Name="KeyStorage" Target="KeyStorage" Default="config" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">config</Config>
+    <Config Name="WRITE_HTML_OUTPUT" Target="WRITE_HTML_OUTPUT" Default="false" Mode="" Description="Forces the service to write the scraped html files to the config map for debugging" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+    <Config Name="RetainMessages" Target="RetainMessages" Default="false" Mode="" Description="Sets all MQTT messages to retain, meaning the messages will never be removed" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+    <WebUI>http://[IP]:[PORT:3005]</WebUI>
+    <Banner></Banner>
+    <Icon>https://raw.githubusercontent.com/BoKKeR/UnraidAPI-RE/master/static/icon.png</Icon>
 </Container>
